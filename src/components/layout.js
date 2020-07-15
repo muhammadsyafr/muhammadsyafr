@@ -48,12 +48,11 @@ const Layout = ({ location, title, children }) => {
           </li>
 
           <li className="nav-menu">
-            <Link
+            <a href="https://ini.space/muhammadsyafr"
               style={{
                 color: `white`,
               }}
-              to={`https://ini.space/muhammadsyafr`}
-            >Social</Link>
+            >Social</a>
           </li>
           <li className="nav-menu">
             <Link
@@ -117,9 +116,7 @@ const Layout = ({ location, title, children }) => {
 
       {
         location.pathname === '/about' || location.pathname === '/about/' ? '' : <footer>
-          © {new Date().getFullYear()}, Built with
-        {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a> &hearts; and Hosted by <a href="https://netlify.com">Netlify</a>
+          © {new Date().getFullYear()}, Built with &hearts; in Purwokerto & Yogyakarta | Hosting at <a href="https://netlify.com">Netlify</a>
         </footer>
       }
     </div>
