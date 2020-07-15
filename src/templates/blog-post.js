@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
+import Profile from "../components/profile"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
@@ -11,13 +12,19 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
 
+  const pathName = location.pathname
+
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article>
+      {
+        pathName === '/about/' || pathName === '/about' ? 
+        <Profile />
+        :
+        <article>
         <header>
           <h1
             style={{
@@ -28,9 +35,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           >
             {post.frontmatter.title}
           </h1>
+
           <p
             style={{
-              ...scale(-1/9),
+              ...scale(-1 / 9),
               display: `block`,
               marginTop: rhythm(0.6),
               marginBottom: rhythm(1),
@@ -40,18 +48,23 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             {post.frontmatter.date}
           </p>
         </header>
-        <section style={{color: '#596275'}} dangerouslySetInnerHTML={{ __html: post.html }} />
+        <section style={{ color: '#596275' }} dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
             marginBottom: rhythm(1),
           }}
         />
+
         <footer>
           <Bio />
         </footer>
-      </article>
 
-      <nav>
+      </article>
+      }
+
+      {
+        pathName === '/about/' || pathName === '/about' ? '' :
+        <nav>
         <ul
           style={{
             display: `flex`,
@@ -77,6 +90,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </li>
         </ul>
       </nav>
+      }
     </Layout>
   )
 }

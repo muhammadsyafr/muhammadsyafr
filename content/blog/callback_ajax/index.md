@@ -1,6 +1,7 @@
 ---
 title: Callback dan AJAX
 date: "2020-03-01T23:46:37.121Z"
+description: 'Callback bisa dipahami dengan arti memanggil kembali code sebagai function biasanya function tersebut bersifat asynchronous, dengan adanya callback ini ...'
 ---
 
 ### Callback

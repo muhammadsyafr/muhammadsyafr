@@ -1,0 +1,30 @@
+.nav-menu {
+    display: inline;
+}
+
+.nav-menu a {
+    background-color: #ea8685;
+    padding: 5px;
+    color: white;
+    margin-right: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.actived {
+    font-weight: bold;
+    background-color: #303952!important;
+    color: #ffffff;
+}
+
+
+.nav-menu a:hover {
+    background-color: #303952;
+    padding: 5px;
+    border-radius: 4px;
+    color: white!important;
+}
+
+.back-link:hover {
+    text-decoration: underline!important;
+}
