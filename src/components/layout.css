@@ -28,3 +28,15 @@
 .back-link:hover {
     text-decoration: underline!important;
 }
+
+blockquote p {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+code {
+    color: #303952!important;
+    font-size: 14px!important;
+    font-weight: bold;
+}

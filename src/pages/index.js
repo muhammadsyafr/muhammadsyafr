@@ -23,7 +23,7 @@ const BlogIndex = ({ data, location }) => {
             <header>
               <h3
                 style={{
-                  marginBottom: rhythm(1 / 4),
+                  marginBottom: rhythm(1 / 3),
                 }}
               >
                 <Link style={{ boxShadow: `none`, color: '#303952' }} to={node.fields.slug}>
@@ -34,7 +34,7 @@ const BlogIndex = ({ data, location }) => {
             </header>
             <section>
               <p
-                style={{color: '#596275'}}
+                style={{color: '#596275', fontFamily: 'Inter'}}
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,
                 }}

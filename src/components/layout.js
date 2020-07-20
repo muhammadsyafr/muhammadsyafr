@@ -82,24 +82,17 @@ const Layout = ({ location, title, children }) => {
 
   } else {
     header = (
-      <h3
+      <Link
+        className="back-link"
         style={{
-          fontFamily: `Montserrat, sans-serif`,
-          marginTop: 0,
-          color: '#ea8685'
+          boxShadow: `none`,
+          textDecoration: `underline`,
+          color: `inherit`,
         }}
+        to={`/`}
       >
-        <Link
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h3>
+        Back
+      </Link>
     )
   }
   return (

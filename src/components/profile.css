@@ -30,8 +30,10 @@ button {
 
 .wrapper-profile h1 {
     color: #303952;
-    font-size: 48px;
+    font-size: 38px;
     width: 100%;
+    font-weight: bold;
+    
 }
 
 .wrap-project {
@@ -51,7 +53,8 @@ button {
     font-family: 'Montserrat';
     font-weight: bold;
     text-decoration: underline;
-    color: rgb(25, 26, 27);
+    /* color: rgb(25, 26, 27); */
+    color: #303952;
  }
 
  .wrap-project span {
