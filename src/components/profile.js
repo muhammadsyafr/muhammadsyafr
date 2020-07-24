@@ -65,9 +65,10 @@ const Profile = () => {
                 </h1>
                 <p className="text-higlight">
                     Hi, my name is Syafrizal. I am a Student at AMIKOM University, Yogyakarta.
-                    Now i am working as Freelance Frontend Developer.
-                    I like UI design because of that I also like exploring other people's work on <i>Dribbble</i>.
-                    I also like watching a series
+                    field of study in informatics engineering.
+                    Right Now i am working as Freelance Web Programmer.
+                    I like UI design, I also like exploring other people's work on <i>Dribbble</i>.
+                    
                 </p>
                 
                 <a href="mailto:muhammadsyafr@gmail.com"><button style={{
@@ -76,7 +77,7 @@ const Profile = () => {
 
             }} className="btn btn-contact"> Contact</button></a>
 
-            <a href="#"><button style={{
+            <a href="https://s.id/cv_syafrizal"><button style={{
                 marginTop: rhythm(0.5),
                 marginBottom: rhythm(1.5),
 
