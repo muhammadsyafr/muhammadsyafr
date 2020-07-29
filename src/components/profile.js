@@ -117,7 +117,7 @@ const Profile = () => {
                 </div>
                 <div className="col-6 col-s-12">
                     <div className="wrap-project">
-                        <a href="https://mokima1.netlify.app/"><h3>Mokima</h3></a>
+                        <a href="https://mokima.netlify.app/"><h3>Mokima</h3></a>
                         <span>Exploration about slicing landingpage for alumni website</span>
                         <Image
                             fixed={data.daris.childImageSharp.fixed}
