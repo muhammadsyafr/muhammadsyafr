@@ -59,9 +59,9 @@ const Bio = () => {
       <p>
       <strong>{author.name}</strong> is a Junior Frontend Developer {author.summary}
         {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
+        {/* <a href={`https://twitter.com/${social.twitter}`}>
           You should follow him on Twitter!
-        </a>
+        </a> */}
       </p>
     </div>
   )
