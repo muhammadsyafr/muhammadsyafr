@@ -65,9 +65,10 @@ const Profile = () => {
                 </h1>
                 <p className="text-higlight">
                     Hi, my name is Syafrizal. I am a Student at AMIKOM University, Yogyakarta.
-                    field of study in informatics engineering.
-                    Right Now i am working as Freelance Web Programmer.
-                    I like UI design, I also like exploring other people's work on <i>Dribbble</i>.
+                    Majoring on informatics engineering.
+                    Currently working as Freelance Web Programmer making a portofolio for some company.
+                    I like UI design also like exploring other people's work on <i>Dribbble</i>.
+                    catch me on Contact button below.
                     
                 </p>
                 
