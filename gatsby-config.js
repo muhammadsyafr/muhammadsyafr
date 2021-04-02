@@ -3,12 +3,13 @@ module.exports = {
     title: `Syafrizal`,
     author: {
       name: `Syafrizal`,
-      summary: `who lives and study in Yogyakarta.`,
+      summary: ``,
     },
-    description: `A starter blog with Gatsby.`,
+    description: `A personal portofolio with GatsbyJS.`,
     siteUrl: `https://muhammadsyafr.netlify.com`,
     social: {
       twitter: `muhammadsyafrzl`,
+      instagram: `muhammadsyafr`
     },
   },
   plugins: [

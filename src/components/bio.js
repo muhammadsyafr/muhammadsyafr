@@ -29,39 +29,26 @@ const Bio = () => {
           }
           social {
             twitter
+            instagram
           }
         }
       }
     }
   `)
 
-  const { author, social } = data.site.siteMetadata
+  const { author } = data.site.siteMetadata
   return (
     <div
       style={{
         display: `flex`,
         marginBottom: rhythm(1),
+        flexDirection: 'column',
+        textAlign: 'center'
       }}
     >
-      <Image
-        fixed={data.avatar.childImageSharp.fixed}
-        alt={author.name}
-        style={{
-          marginRight: rhythm(1 / 2),
-          marginBottom: 0,
-          minWidth: 50,
-          borderRadius: `100%`,
-        }}
-        imgStyle={{
-          borderRadius: `50%`,
-        }}
-      />
+      
       <p>
-      <strong>{author.name}</strong> is a Junior Frontend Developer {author.summary}
-        {` `}
-        {/* <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter!
-        </a> */}
+        <strong>{author.name}</strong> is a Junior Frontend Developer
       </p>
     </div>
   )

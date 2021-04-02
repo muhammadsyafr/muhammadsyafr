@@ -61,14 +61,13 @@ const Profile = () => {
                         marginTop: rhythm(1),
                         marginBottom: rhythm(1.5),
                     }}>
-                    It’s a nice to meet you here
+                    It’s a nice to meet you here &#128075;
                 </h1>
                 <p className="text-higlight">
-                    Hi, my name is Syafrizal. I am a Student at AMIKOM University, Yogyakarta.
+                    Hii, My name is Syafrizal. I am a Student at AMIKOM University Yogyakarta.
                     Majoring on informatics engineering.
-                    Currently working as Freelance Web Programmer making a portofolio for some company.
-                    I like UI design also like exploring other people's work on <i>Dribbble</i>.
-                    catch me on Contact button below.
+                    Currently working as Freelance Web Programmer.
+                    Catch me on contact button below.
                     
                 </p>
                 
@@ -104,7 +103,7 @@ const Profile = () => {
                 <div className="col-6 col-s-12">
                     <div className="wrap-project">
                         <a href="https://premierleague-concept.netlify.app/"><h3>Premier League</h3></a>
-                        <span>Simple weatherApp using OpenWeather api and ionic react </span>
+                        <span>Simple weatherApp using OpenWeather as an API and Ionic React as FE</span>
                         <Image
                             fixed={data.pleague.childImageSharp.fixed}
                             alt="hai"
@@ -119,7 +118,7 @@ const Profile = () => {
                 <div className="col-6 col-s-12">
                     <div className="wrap-project">
                         <a href="https://mokima.netlify.app/"><h3>Mokima</h3></a>
-                        <span>Exploration about slicing landingpage for alumni website</span>
+                        <span>Exploration about slicing landingpage for alumni website, using bootstrap</span>
                         <Image
                             fixed={data.daris.childImageSharp.fixed}
                             alt="hai"
@@ -134,7 +133,7 @@ const Profile = () => {
                 <div className="col-6 col-s-12">
                     <div className="wrap-project">
                         <a href="https://hijabie.netlify.app/"><h3>Hijabie</h3></a>
-                        <span>Exploration about slicing that landingpage for hijab product</span>
+                        <span>Non commercial project, slicing landingpage for women to use their hijab on daily activities </span>
                         <Image
                             fixed={data.hijabie.childImageSharp.fixed}
                             alt="hai"
@@ -149,8 +148,7 @@ const Profile = () => {
                 <div className="col-6 col-s-12">
                     <div className="wrap-project">
                         <a href="https://weatherandlocal.netlify.app/"><h3>Weather App</h3></a>
-                        <span>Exploration about
-simple weather using OpenWeather api and ionic</span>
+                        <span>Simple predict weather apps using OpenWeather as API and Ionic React as FE</span>
                         <Image
                             fixed={data.weatherapp.childImageSharp.fixed}
                             alt="hai"
@@ -187,7 +185,6 @@ simple weather using OpenWeather api and ionic</span>
 
             <footer>
             Follow me for more thoughts and updates on {''}
-                <a className="footer-social" href="https://twitter.com/muhammadsyafrzl">Twitter</a> or {''}
                 <a className="footer-social" href="https://instagram.com/muhammadsyafr">Instagram</a>
             </footer>
         </>

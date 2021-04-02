@@ -1,40 +1,75 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery } from "gatsby"
+import Image from "gatsby-image"
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 import './layout.css';
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   let header
+  const data = useStaticQuery(graphql`
+    query BioQueryee {
+      avatar: file(absolutePath: { regex: "/saprol/" }) {
+        childImageSharp {
+          fixed(width: 60, height: 80) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      site {
+        siteMetadata {
+          author {
+            name
+            summary
+          }
+          social {
+            twitter
+            instagram
+          }
+        }
+      }
+    }
+  `)
+  const { author } = data.site.siteMetadata
 
   if (location.pathname === rootPath) {
     header = (
-      <center>
-        <h1
+      <div id="main">
+       <div 
+       style={{
+         display: 'flex',
+         alignItems: 'center',
+         flexDirection: 'column',
+         justifyContent: 'center',
+         fontFamily: 'Montserrat',
+         marginBottom: -20
+       }}
+       className="nav">
+          <Image
+          fixed={data.avatar.childImageSharp.fixed}
+          alt={author.name}
           style={{
-            ...scale(1),
-            marginBottom: rhythm(0),
-            marginTop: 0,
-            fontWeight: '800',
-            color: '#303952'
+            // marginRight: rhythm(1 / 2),
+            marginBottom: 0,
+            minWidth: 40,
+            borderRadius: `100%`,
           }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
+          imgStyle={{
+            borderRadius: `50%`,
+          }}
+          />
+        <p style={{
+          fontWeight: 600,
+          fontSize: 24,
+          color: "rgb(48, 57, 82)"
+        }}>Syafrizal</p>
+
+        </div>
 
         <ul style={{
-          marginBottom: rhythm(1.5),
-          marginTop: rhythm(0.5),
+          textAlign: 'center',
+          // marginBottom: rhythm(1.5),
           fontWeight: 500
         }}>
           <li className="nav-menu">
@@ -48,7 +83,7 @@ const Layout = ({ location, title, children }) => {
           </li>
 
           <li className="nav-menu">
-            <a href="https://ini.space/muhammadsyafr"
+            <a href="https://linktr.ee/muhammadsyafr"
               style={{
                 color: `white`,
               }}
@@ -63,7 +98,7 @@ const Layout = ({ location, title, children }) => {
             >About</Link>
           </li>
         </ul>
-      </center>
+      </div>
     )
   } else if (location.pathname === '/about' || location.pathname === '/about/') {
     header = (
@@ -109,7 +144,7 @@ const Layout = ({ location, title, children }) => {
 
       {
         location.pathname === '/about' || location.pathname === '/about/' ? '' : <footer>
-          © {new Date().getFullYear()}, Built with &hearts; in Purwokerto & Yogyakarta | Hosting at <a href="https://netlify.com">Netlify</a>
+          © {new Date().getFullYear()}, Built with &hearts; in Purwokerto & Yogyakarta | Hosted at <a href="https://netlify.com">Netlify</a>
         </footer>
       }
     </div>

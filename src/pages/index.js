@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
+// import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
@@ -10,13 +10,13 @@ const BlogIndex = ({ data, location }) => {
 
   const siteTitle = data.site.siteMetadata.title
   // const posts = data.allMarkdownRemark.edges
-  const pos =  data.allMarkdownRemark.edges.filter((v) => v.node.fields.slug !== '/about/' )
+  const post =  data.allMarkdownRemark.edges.filter((v) => v.node.fields.slug !== '/about/' )
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
-      <Bio />
-      {pos.map(({ node }) => {
+      <SEO title="Home" />
+      {/* <Bio /> */}
+      {post.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
           <article key={node.fields.slug}>
@@ -34,7 +34,7 @@ const BlogIndex = ({ data, location }) => {
             </header>
             <section>
               <p
-                style={{color: '#596275', fontFamily: 'Inter'}}
+                style={{color: '#596275', fontFamily: 'Montserrat'}}
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,
                 }}
